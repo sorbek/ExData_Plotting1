@@ -18,7 +18,8 @@ df_gap$Datetime <- strptime(df_gap$Datetime, "%Y-%m-%d %H:%M:%S")
 # select only columns needed for plot
 df_gap <- df_gap[,c("Datetime", "Global_active_power")]
 
-png(filename = "plot2.png", width = 480, height = 480)
+par(bg = "transparent")
+png(filename = "plot2.png", width = 480, height = 480, bg = "transparent")
 
 with(df_gap, plot(Datetime, Global_active_power,
                   ylab = "Global Active Power (kilowatts)",

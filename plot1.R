@@ -8,7 +8,8 @@ df_gap <- subset(df, subset=df$Date %in% c("1/2/2007", "2/2/2007"),
 # convert to numeric values
 df_gap <- as.numeric(df_gap[,])
 
-png(filename = "plot1.png", width = 480, height = 480)
+par(bg = "transparent")
+png(filename = "plot1.png", width = 480, height = 480, bg = "transparent")
 
 hist(df_gap,
      col = "red",

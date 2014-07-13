@@ -17,7 +17,8 @@ df_sm$Date <- strptime(df_sm$Date, "%d/%m/%Y")
 df_sm$Datetime <- paste(df_sm$Date, df_sm$Time)
 df_sm$Datetime <- strptime(df_sm$Datetime, "%Y-%m-%d %H:%M:%S")
 
-png(filename = "plot3.png", width = 480, height = 480)
+par(bg = "transparent")
+png(filename = "plot3.png", width = 480, height = 480, bg = "transparent")
 
 with(df_sm, plot(Datetime, Sub_metering_1,
                  ylab = "Energy sub metering",

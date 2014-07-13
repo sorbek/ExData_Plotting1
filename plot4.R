@@ -21,7 +21,8 @@ df_p4$Date <- strptime(df_p4$Date, "%d/%m/%Y")
 df_p4$Datetime <- paste(df_p4$Date, df_p4$Time)
 df_p4$Datetime <- strptime(df_p4$Datetime, "%Y-%m-%d %H:%M:%S")
 
-png(filename = "plot4.png", width = 480, height = 480)
+par(bg = "transparent")
+png(filename = "plot4.png", width = 480, height = 480, bg = "transparent")
 
 # set up 2 by 2 plots
 par(mfrow = c(2, 2))
